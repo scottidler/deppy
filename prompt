@@ -1,0 +1,9 @@
+deppy
+
+A rust program that given a path will search for every .py file and copy all import statements that are relative to the codebase (no external imports). It will then create a new folder with the same structure as the original codebase and copy all the files and folders from the original codebase to the new one. It will then replace all the import statements with the new ones. It will then build a yaml file with all directories ending with / and all python files ending with .py. The value of the python file keys will be the text block of the imports taken from that file.
+
+The program will use the following libraries:
+- clap 4.4.18 with derive features enabled
+- eyre (no unwraps)
+- log and env_logger to allow logging to be controlled by RUST_LOG environment variable
+- serde and serde_yaml to allow creation of the output file
