@@ -10,7 +10,7 @@ use clap::{Parser as ClapParser, ValueEnum};
 use eyre::Result;
 
 #[derive(ClapParser, Debug)]
-#[clap(author, version, about, long_about = None)]
+#[clap(author, version = env!("GIT_DESCRIBE"), about, long_about = None)]
 struct Args {
     #[clap(value_parser, help = "path to file or directory")]
     path: String,
