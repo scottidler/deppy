@@ -1,11 +1,10 @@
 #![allow(unused_imports)]
 
+use log::{debug, error, info, warn};
 use std::fmt::Display;
 use std::fs;
 use std::{path::Path, str::FromStr};
-use log::{debug, info, warn, error};
 
-use env_logger;
 use clap::{Parser as ClapParser, ValueEnum};
 use eyre::Result;
 
@@ -47,6 +46,6 @@ fn process_path(path: &Path, recursive: bool) -> Result<()> {
 
 fn process_file(path: &Path) -> Result<()> {
     debug!("Processing file: {:?}", path);
-    let content = fs::read_to_string(path)?;
+    fs::read_to_string(path)?;
     Ok(())
 }
