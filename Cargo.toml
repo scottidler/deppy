@@ -13,3 +13,6 @@ eyre = "0.6.12"
 log = "0.4.20"
 serde = "1.0.196"
 serde_yaml = "0.9.31"
+
+[build-dependencies]
+build-version = { git = "https://github.com/tatari-tv/build-version-rs", tag = "v0.1.0", version = "0.1.0" }
